@@ -810,7 +810,7 @@ def constrain_ages_topo(ts, post_mn, eps, nodes_to_date=None, progress=False):
         children = nd_children[children_index]
         time = np.max(new_mn_post[children])
         if new_mn_post[nd] <= time:
-            topology_constrained=True
+            topology_constrained = True
             new_mn_post[nd] = time + eps
     if topology_constrained is True:
         logging.info(">= 1 node time changed due to topological constraints")
